@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f959d5b184e4c9b97ff6d3199f5825f" Name="Diagram1">
+        <EntityTypeShape EntityType="DBQLHiglandModel.AdminUser" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLHiglandModel.Category" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLHiglandModel.Customer" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLHiglandModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLHiglandModel.OrderPro" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLHiglandModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DBQLHiglandModel.FK__Product__IDProdu__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLHiglandModel.FK__OrderPro__IDCus__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLHiglandModel.FK__OrderDeta__IDOrd__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLHiglandModel.FK__OrderDeta__IDPro__403A8C7D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

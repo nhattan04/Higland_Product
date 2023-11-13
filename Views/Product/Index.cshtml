@@ -1,0 +1,59 @@
+﻿@model IEnumerable<DU_AN.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- link slider  -->
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<!-- slider buy -->
+<div class="swiffy-slider slider-item-show5 slider-item-ratio slider-item-ratio-3x4 slider-nav-square slider-nav-sm slider-nav-outside slider-nav-visible slider-indicators-round slider-nav-animation-fast" style="left:150px;width: 1220px; height: 356px;">
+    <ul class="slider-container">
+        <li class="slide-visible">
+            <div id="slide1">
+                <div class="card border-0" style="display:inline-flex">
+                    @foreach (var pro in Model)
+                    {
+                        <div class="ratio ratio-1x1">
+                            <img src="@Url.Content(pro.imageProduct1)" class="card-img-top" loading="lazy" alt="..." style="width:210px; height:205px" />
+                        </div>
+                        <div class="card-body p-0 pt-2">
+                            <div class="d-inline">
+                                <h3 class="flex-grow-1 h5">@Html.DisplayFor(model => pro.NameProduct)</h3>
+                                <p class="px-2">@Html.DisplayFor(model => pro.PriceProduct) vnd</p>
+                            </div>
+
+                            @*<div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>*@
+
+                            <a href="/ShoppingCart/AddToCart/@pro.IDProduct" class="btn btn-default">Buy</a>
+
+                            <button class="active" title="Mua ngay" tabindex="-1" style="width:210px; background-color: white; color: black; border: 2px solid #008CBA;">
+                                <img class="add_img" width="25" height="25" src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/shopping-bag.png?1698400383494" alt="Chọn mua" style="width:15px; height:15px"> Chọn mua
+                            </button>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <button type="button" class="slider-nav"></button>
+    <button type="button" class="slider-nav slider-nav-next"></button>
+
+
+</div>
